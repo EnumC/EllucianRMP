@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Rate My DeAnza Professor - De Anza College",
+  "short_name": "RMP De Anza",
+  "description": "Automatically retrieve professor ratings on the course list!",
+  "version": "1.0.4",
+  "version_name": "1.0.4a",
+  "icons": { 
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png" 
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://ssb-prod.ec.fhda.edu/PROD/bwskfcls.P_GetCrse"],
+      "js": ["jquery.js", "content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "https://ssb-prod.ec.fhda.edu/*"
+  ],
+  "author": "Eric Qian",
+  "homepage_url": "https://bananiumlabs.com",
+  "manifest_version": 2
+}
